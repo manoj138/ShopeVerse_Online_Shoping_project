@@ -109,41 +109,39 @@ useEffect(() => {
         watchSlidesProgress={true}
         className="h-[650px]"
       >
-        <div>
-          {heroSlides.map((slide) => (
-            <SwiperSlide key={slide.id}>
-              <div
-                className={`h-[650px]  bg-gradient-to-r ${slide.bgFrom} ${slide.bgTo} flex items-center`}
-              >
-                <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full gap-10 text-white text-center lg:text-left mt-[-80px] lg:mt-0">
-                  <div className="space-y-6 max-w-xl mx-auto lg:mx-0">
-                    <span className="inline-block px-4 py-1.5 text-sm font-semibold tracking-wide rounded-full bg-white/20 backdrop-blur-sm border border-white/10 shadow-lg">
-                      {slide.badge}
-                    </span>
+        {heroSlides.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <div
+              className={`h-[650px]  bg-gradient-to-r ${slide.bgFrom} ${slide.bgTo} flex items-center`}
+            >
+              <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full gap-10 text-white text-center lg:text-left mt-[-80px] lg:mt-0">
+                <div className="space-y-6 max-w-xl mx-auto lg:mx-0">
+                  <span className="inline-block px-4 py-1.5 text-sm font-semibold tracking-wide rounded-full bg-white/20 backdrop-blur-sm border border-white/10 shadow-lg">
+                    {slide.badge}
+                  </span>
 
-                    <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight drop-shadow-lg">{slide.title}</h1>
+                  <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight drop-shadow-lg">{slide.title}</h1>
 
-                    <p className="text-lg text-white/90 leading-relaxed font-medium max-w-lg mx-auto lg:mx-0 drop-shadow">
-                      {slide.description}
-                    </p>
+                  <p className="text-lg text-white/90 leading-relaxed font-medium max-w-lg mx-auto lg:mx-0 drop-shadow">
+                    {slide.description}
+                  </p>
 
-                    <button className="px-8 py-4 bg-white text-gray-900 font-bold rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all transform duration-300">
-                      {slide.buttonText}
-                    </button>
-                  </div>
+                  <button className="px-8 py-4 bg-white text-gray-900 font-bold rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all transform duration-300">
+                    {slide.buttonText}
+                  </button>
+                </div>
 
-                  <div className="hidden lg:block w-[550px] h-[400px] overflow-hidden rounded-2xl shadow-2xl shadow-black/50 border border-white/10 transform hover:-translate-y-2 transition duration-500">
-                    <img
-                      src={slide.image}
-                      alt={slide.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                <div className="hidden lg:block w-[550px] h-[400px] overflow-hidden rounded-2xl shadow-2xl shadow-black/50 border border-white/10 transform hover:-translate-y-2 transition duration-500">
+                  <img
+                    src={slide.image}
+                    alt={slide.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
-            </SwiperSlide>
-          ))}
-        </div>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 bg-gray-950">
