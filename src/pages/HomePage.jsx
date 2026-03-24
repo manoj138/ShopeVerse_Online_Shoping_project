@@ -64,7 +64,7 @@ useEffect(() => {
       description:
         "Start the year with amazing deals on electronics, fashion, and more!",
       buttonText: "Shop Now →",
-      image: "https://images.unsplash.com/photo-1607082349566-187342175e2f",
+      image: "https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=1200&q=80",
       bgFrom: "from-purple-600",
       bgTo: "to-indigo-600",
     },
@@ -74,7 +74,7 @@ useEffect(() => {
       title: "Mega Fashion Sale",
       description: "Trending styles at unbeatable prices.",
       buttonText: "Explore →",
-      image: "https://images.unsplash.com/photo-1521334884684-d80222895322",
+      image: "https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1200&q=80",
       bgFrom: "from-pink-600",
       bgTo: "to-purple-600",
     },
@@ -85,7 +85,7 @@ useEffect(() => {
       description:
         "Discover the latest smart gadgets designed to make your life easier and smarter.",
       buttonText: "Discover →",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
       bgFrom: "from-blue-600",
       bgTo: "to-violet-600",
     },
@@ -105,9 +105,8 @@ useEffect(() => {
           pauseOnMouseEnter: false,
         }}
         loop={true}
-        loopedSlides={heroSlides.length}
-        watchSlidesProgress={true}
-        className="h-[650px]"
+        grabCursor={true}
+        className="h-[650px] relative z-10"
       >
         {heroSlides.map((slide) => (
           <SwiperSlide key={slide.id}>
